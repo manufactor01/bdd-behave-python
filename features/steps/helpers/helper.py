@@ -6,7 +6,7 @@ from chromedriver_py import binary_path
 
 def read_config():
     config = configparser.ConfigParser()
-    config.read('../../config.ini')
+    config.read('../config.ini')
     return config
 
 def prepare_driver_for_chrome():
