@@ -2,6 +2,7 @@
 # Estructura del proyecto
 ~~~
 project/
+├── requirements.txt
 ├── config.ini
 ├── features/
 │   ├── duckduckgo.feature
@@ -11,6 +12,16 @@ project/
 │       └── duckduckgo_page.py
 ├── utils/
 │   └── driver_utils.py
+~~~
+
+# Instalación
+Este starter de selenium + python está configurado para trabajar con el navegador Mozilla.
+
+1. Abrir consola y ejecutar:
+~~~bash
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
 ~~~
 
 # Ejecución
