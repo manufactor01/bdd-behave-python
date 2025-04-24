@@ -1,2 +1,5 @@
 behave_type/
 __pycache__/
+allure-report/
+allure-results/
+venv/
