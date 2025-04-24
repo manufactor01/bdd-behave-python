@@ -14,6 +14,7 @@ class DuckDuckGoPage:
 
     def load(self):
         self.driver.get(self.url)
+        self.driver.maximize_window()
 
     def search(self, term):
         wait = WebDriverWait(self.driver, 10)

@@ -26,3 +26,20 @@ def step_impl(context):
             attachment_type=AttachmentType.PNG
         )
         raise e
+
+@when('I search for "{term}"')
+def step_impl(context, term):
+    context.page.search(term)
+
+@then('I should see results related to "{term}"')
+def step_impl(context, term):
+    results = context.page.get_result_texts()
+    try:
+        assert any(term.lower() in text.lower() for text in results), "No result contains the search term"
+    except AssertionError as e:
+        allure.attach(
+            context.driver.get_screenshot_as_png(),
+            name="Search Results",
+            attachment_type=AttachmentType.PNG
+        )
+        raise e
