@@ -9,8 +9,7 @@ def read_config():
 
 def prepare_driver_for_firefox():
     geckodriver_autoinstaller.install()
-    driver = webdriver.Firefox()
-    return driver
+    return webdriver.Firefox()
 
 def prepare_driver(driver_type):
     if driver_type == "firefox":
